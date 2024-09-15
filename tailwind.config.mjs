@@ -6,7 +6,19 @@ export default {
 		'&:is(.dark *)',
 	]],
 	theme: {
-		extend: {},
+		extend: {
+			colors: ({ colors }) => ({
+				primary: {
+					100: "#9333ea",
+					900: "#7315cb",
+				},
+				secondary: {
+					100: "#ff7e33",
+					900: "#cc4b00",
+				},
+				info: "#0c63e7",
+			}),
+		},
 	},
 	plugins: [],
 }
