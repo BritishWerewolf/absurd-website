@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Urbanist;
+    src: url(/fonts/Urbanist-VariableFont_wght.ttf) format("truetype");
+}
+
+html {
+    font-family: Urbanist, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
