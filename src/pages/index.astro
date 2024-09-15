@@ -1,18 +1,15 @@
 ---
+import MainLayout from '../layouts/DefaultLayout.astro';
 
+import HeroSection from '../components/HeroSection.astro';
+import Features from '../components/Features.astro';
+import CallToAction from '../components/CallToAction.astro';
 ---
 
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-	<meta name="viewport" content="width=device-width">
-	<meta name="generator" content={Astro.generator}>
-
-	<title>Absurd</title>
-</head>
-<body>
-	<h1 class="text-3xl">Absurd</h1>
-	<p class="text-2xl text-balance">The <span>essential tool</span> for implementing <span>SurrealDB</span> into your project</p>
-</body>
-</html>
+<MainLayout title="Welcome to Absurd.">
+	<main class="space-y-40">
+		<HeroSection />
+		<Features />
+		<CallToAction />
+	</main>
+</MainLayout>
