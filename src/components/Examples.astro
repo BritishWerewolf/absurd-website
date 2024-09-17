@@ -9,12 +9,12 @@ import Container from "@/components/Container.astro";
         </div>
 
         <p class="text-lg">Absurd currently supports creating models, stores, and controllers.</p>
+        <p>In it's current state, this will always output a Rust struct, though this will be different depending on the language of your project.</p>
+        <sub>Currently this feature is not built, and only Rust structs can be generated.</sub>
 
-        <div>
+        <div class="my-8">
             <h3 class="my-4 text-lg font-bold text-gray-700 dark:text-white md:text-4xl">Models</h3>
             <p>A model is simply a map of the table in a struct.</p>
-            <p>In it's current state, this will always output a Rust struct, though this will be different depending on the language of your project.</p>
-            <sub>Currently this feature is not built, and only Rust structs can be generated.</sub>
 
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <code>
@@ -37,6 +37,25 @@ import Container from "@/components/Container.astro";
                     <pre class="comment">Creates a Schemaless model with two fields</pre>
                     <pre class="comment">Each field will have it's own struct to handle</pre>
                     <pre class="shell">absurd create model User --fields name email --schemaless</pre>
+                </code>
+            </div>
+        </div>
+
+        <div class="my-8">
+            <h3 class="my-4 text-lg font-bold text-gray-700 dark:text-white md:text-4xl">Stores</h3>
+            <p>A store provides simple access to SurrealDB's engine.</p>
+            <p>All stores implement the same trait, allowing for fantastic support for dependency injection.</p>
+
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <code>
+                    <pre class="comment">Create a store called General, using a none persistent DB</pre>
+                    <pre class="shell">absurd create store General</pre>
+                    <pre class="shell">absurd create store General --engine mem</pre>
+                </code>
+
+                <code>
+                    <pre class="comment">Create a store called Setting, that stores the data in a file</pre>
+                    <pre class="shell">absurd create store Setting --engine rocks-db</pre>
                 </code>
             </div>
         </div>
