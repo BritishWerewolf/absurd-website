@@ -12,22 +12,22 @@ import Container from "@/components/Container.astro";
         </div>
 
         <div class="grid">
-            <div class="col-first">
+            <div>
                 <p>Additional SDKs</p>
                 <p>SurrealDB has support for many different languages, this tool is currently only working in Rust; however there are plans to make this available for any SDK.</p>
             </div>
 
-            <div class="col-second">
+            <div>
                 <p>Full engine support</p>
                 <p>Support should be added for all available engines in SurrealDB. The current in memory and file stores can still be edited - but this will be automated in future.</p>
             </div>
 
-            <div class="col-first">
+            <div>
                 <p>Additional CLI commands</p>
                 <p>In addition to the <code>create</code> command, there should be more commands available. We will look to Laravel's Artisan command for inspiration.</p>
             </div>
 
-            <div class="col-second">
+            <div>
                 <p>Improved documentation</p>
                 <p>More thorough examples and documentation of the new and existing features.</p>
             </div>
@@ -53,8 +53,8 @@ h2 {
     @apply text-gray-700 dark:text-white;
 }
 
-.col-first,
-.col-second {
+.grid > div:nth-child(odd),
+.grid > div:nth-child(even) {
     @apply flex flex-col flex-1;
     @apply w-full max-w-96;
     @apply flex-1 p-4 border border-gray-800 rounded-lg dark:border-gray-600;
@@ -64,11 +64,11 @@ h2 {
         @apply mb-4 text-lg font-bold;
     }
 }
-.col-first {
+.grid > div:nth-child(odd) {
     @apply md:col-start-1;
     @apply justify-self-end md:mb-16;
 }
-.col-second {
+.grid > div:nth-child(even) {
     @apply md:col-start-2;
     @apply justify-self-start md:mt-16;
 }

@@ -8,7 +8,7 @@ import Container from "@/components/Container.astro";
             <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">Examples</h2>
         </div>
 
-        <p>Absurd currently supports creating models, stores, and controllers.</p>
+        <p class="text-lg">Absurd currently supports creating models, stores, and controllers.</p>
 
         <div>
             <h3 class="my-4 text-lg font-bold text-gray-700 dark:text-white md:text-4xl">Models</h3>
@@ -16,7 +16,7 @@ import Container from "@/components/Container.astro";
             <p>In it's current state, this will always output a Rust struct, though this will be different depending on the language of your project.</p>
             <sub>Currently this feature is not built, and only Rust structs can be generated.</sub>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                 <code>
                     <pre class="comment">Creates a Schemafull model with two fields</pre>
                     <pre class="shell">absurd create model User --fields name email</pre>
