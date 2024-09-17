@@ -9,6 +9,8 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [
     sentry(), spotlightjs(),
-    tailwind(),
+    tailwind({
+      nesting: true,
+    }),
   ]
 });
