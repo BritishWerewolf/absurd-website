@@ -49,7 +49,7 @@ h2 {
 }
 
 .grid {
-    @apply gap-x-12 grid-cols-1 md:grid-cols-2;
+    @apply gap-y-8 md:gap-x-12 grid-cols-1 md:grid-cols-2;
     @apply text-gray-700 dark:text-white;
 }
 
@@ -58,17 +58,18 @@ h2 {
     @apply flex flex-col flex-1;
     @apply w-full max-w-96;
     @apply flex-1 p-4 border border-gray-800 rounded-lg dark:border-gray-600;
+    @apply col-start-1;
 
     > p:first-child {
         @apply mb-4 text-lg font-bold;
     }
 }
 .col-first {
-    @apply col-start-1;
-    @apply justify-self-end mb-16;
+    @apply md:col-start-1;
+    @apply justify-self-end md:mb-16;
 }
 .col-second {
-    @apply col-start-2;
-    @apply justify-self-start mt-16;
+    @apply md:col-start-2;
+    @apply justify-self-start md:mt-16;
 }
 </style>

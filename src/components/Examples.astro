@@ -1,0 +1,68 @@
+---
+import Container from "@/components/Container.astro";
+---
+
+<section id="examples">
+    <Container>
+        <div class="md:w-2/3 lg:w-1/2">
+            <h2 class="my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl">Examples</h2>
+        </div>
+
+        <p>Absurd currently supports creating models, stores, and controllers.</p>
+
+        <div>
+            <h3 class="my-4 text-lg font-bold text-gray-700 dark:text-white md:text-4xl">Models</h3>
+            <p>A model is simply a map of the table in a struct.</p>
+            <p>In it's current state, this will always output a Rust struct, though this will be different depending on the language of your project.</p>
+            <sub>Currently this feature is not built, and only Rust structs can be generated.</sub>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <code>
+                    <pre class="comment">Creates a Schemafull model with two fields</pre>
+                    <pre class="shell">absurd create model User --fields name email</pre>
+                </code>
+
+                <code>
+                    <pre class="comment">Creates a Schemafull model with a single field called value</pre>
+                    <pre class="shell">absurd create model Post</pre>
+                </code>
+
+                <code>
+                    <pre class="comment">Creates a Schemaless model for a table called Setting and a field called Dark</pre>
+                    <pre class="comment">Multiple models are created to make it easier to retrieve single fields</pre>
+                    <pre class="shell">absurd create model Setting/Dark</pre>
+                </code>
+
+                <code>
+                    <pre class="comment">Creates a Schemaless model with two fields</pre>
+                    <pre class="comment">Each field will have it's own struct to handle</pre>
+                    <pre class="shell">absurd create model User --fields name email --schemaless</pre>
+                </code>
+            </div>
+        </div>
+    </Container>
+</section>
+
+<style>
+#examples {
+    @apply text-gray-600 dark:text-gray-300;
+}
+
+sub {
+    @apply block mt-2 mb-4;
+}
+
+code {
+    @apply p-4 rounded-lg mt-4 overflow-auto;
+    @apply border border-gray-200 dark:border-gray-700;
+}
+
+.comment {
+    @apply before:content-['#_'];
+    @apply text-green-400 dark:text-green-700;
+}
+
+.shell {
+    @apply before:content-['$_'] first-letter:text-green-400 dark:first-letter:text-green-700;
+}
+</style>
