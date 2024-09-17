@@ -1,9 +1,10 @@
 ---
-import MainLayout from '../layouts/DefaultLayout.astro';
+import MainLayout from '@/layouts/DefaultLayout.astro';
 
-import HeroSection from '../components/HeroSection.astro';
-import Features from '../components/Features.astro';
-import CallToAction from '../components/CallToAction.astro';
+import HeroSection from '@/components/HeroSection.astro';
+import Features from '@/components/Features.astro';
+import CallToAction from '@/components/CallToAction.astro';
+import Roadmap from '@/components/Roadmap.astro';
 ---
 
 <MainLayout title="Welcome to Absurd.">
@@ -11,5 +12,6 @@ import CallToAction from '../components/CallToAction.astro';
 		<HeroSection />
 		<Features />
 		<CallToAction />
+		<Roadmap />
 	</main>
 </MainLayout>

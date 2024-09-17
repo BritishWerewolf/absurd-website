@@ -1,0 +1,74 @@
+---
+import Container from "@/components/Container.astro";
+---
+
+<section id="roadmap">
+    <Container>
+        <div class="md:w-2/3 lg:w-1/2">
+            <h2>
+                Roadmap
+                <div class="pill">Pre-alpha</div>
+            </h2>
+        </div>
+
+        <div class="grid">
+            <div class="col-first">
+                <p>Additional SDKs</p>
+                <p>SurrealDB has support for many different languages, this tool is currently only working in Rust; however there are plans to make this available for any SDK.</p>
+            </div>
+
+            <div class="col-second">
+                <p>Full engine support</p>
+                <p>Support should be added for all available engines in SurrealDB. The current in memory and file stores can still be edited - but this will be automated in future.</p>
+            </div>
+
+            <div class="col-first">
+                <p>Additional CLI commands</p>
+                <p>In addition to the <code>create</code> command, there should be more commands available. We will look to Laravel's Artisan command for inspiration.</p>
+            </div>
+
+            <div class="col-second">
+                <p>Improved documentation</p>
+                <p>More thorough examples and documentation of the new and existing features.</p>
+            </div>
+        </div>
+    </Container>
+</section>
+
+<style>
+h2 {
+    @apply my-8 text-2xl font-bold text-gray-700 dark:text-white md:text-4xl;
+}
+
+.pill {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5;
+    @apply text-xs font-semibold;
+    @apply transition-colors border-transparent bg-primary-100 text-gray-900;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply dark:bg-primary-500 text-white;
+}
+
+.grid {
+    @apply gap-x-12 grid-cols-1 md:grid-cols-2;
+    @apply text-gray-700 dark:text-white;
+}
+
+.col-first,
+.col-second {
+    @apply flex flex-col flex-1;
+    @apply w-full max-w-96;
+    @apply flex-1 p-4 border border-gray-800 rounded-lg dark:border-gray-600;
+
+    > p:first-child {
+        @apply mb-4 text-lg font-bold;
+    }
+}
+.col-first {
+    @apply col-start-1;
+    @apply justify-self-end mb-16;
+}
+.col-second {
+    @apply col-start-2;
+    @apply justify-self-start mt-16;
+}
+</style>

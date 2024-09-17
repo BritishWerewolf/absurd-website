@@ -1,37 +1,36 @@
 ---
+import Blur from '@/components/Blur.astro';
 import Container from '@/components/Container.astro';
 ---
 
 <div class="relative" id="home">
-    <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
-        <div class="blur-[106px] h-56 bg-gradient-to-br from-primary-100 to-purple-400 dark:from-blue-700"></div>
-        <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
-    </div>
+    <Blur />
     <Container>
         <div class="relative ml-auto pt-36">
             <div class="mx-auto text-center lg:w-2/3">
-                <h1 class="text-5xl font-bold text-gray-900 dark:text-white md:text-6xl xl:text-7xl">Shaping a world with <span class="text-primary-900 dark:text-primary-100">reimagination.</span></h1>
-                <p class="mt-8 text-gray-700 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio incidunt nam itaque sed eius modi error totam sit illum. Voluptas doloribus asperiores quaerat aperiam. Quidem harum omnis beatae ipsum soluta!</p>
+                <h1 class="invisible">Absurd - The Productivity tool for SurrealDB.</h1>
+                <h2 class="text-5xl font-bold text-gray-900 text-balance dark:text-white md:text-6xl xl:text-7xl">
+                    The ultimate <span class="text-secondary-900 dark:text-secondary-100">productivity tool</span> for <span class="text-primary-900 dark:text-primary-100">SurrealDB</span></p>
+                </h2>
+
                 <div class="flex flex-wrap justify-center mt-16 gap-y-4 gap-x-6">
-                    <a href="#" class="relative flex items-center justify-center w-full px-6 h-11 before:absolute before:inset-0 before:rounded-full before:bg-primary-100 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
-                      <span class="relative text-base font-semibold text-white">Get started</span>
-                    </a>
-                    <a href="#" class="relative flex items-center justify-center w-full px-6 h-11 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary-100/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max">
-                      <span class="relative text-base font-semibold text-primary-100 dark:text-white">Learn more</span>
+                    <a href="https://crates.io/crates/absurd" class="relative flex items-center justify-center w-full px-6 h-11 before:absolute before:inset-0 before:rounded-full before:bg-primary-500 before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
+                        <span class="relative text-base font-semibold text-white">Get started</span>
                     </a>
                 </div>
-                <div class="justify-between hidden py-8 mt-16 border-gray-100 border-y dark:border-gray-800 sm:flex">
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The lowest price</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+
+                <div class="justify-between hidden py-8 mt-16 text-left border-gray-100 text-pretty border-y dark:border-gray-800 sm:flex">
+                    <div class="flex-1">
+                        <p class="text-lg font-semibold text-gray-700 dark:text-white">Easy to use</p>
+                        <p class="mt-2 text-gray-500">A simple CLI to easily create stores, models and controllers.</p>
                     </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The fastest on the market</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+                    <div class="flex-1">
+                        <p class="text-lg font-semibold text-gray-700 dark:text-white">Flexible and Scalable</p>
+                        <p class="mt-2 text-gray-500">Supports multiple engines like In-Memory and RocksDB</p>
                     </div>
-                    <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The most loved</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+                    <div class="flex-1">
+                        <p class="text-lg font-semibold text-gray-700 dark:text-white">Iron Oxide</p>
+                        <p class="mt-2 text-gray-500">Written in Rust, for the SurrealDB Rust SDK, with plans to support more SDKs</p>
                     </div>
                 </div>
             </div>

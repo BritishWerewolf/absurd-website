@@ -1,0 +1,10 @@
+---
+const { title } = Astro.props;
+---
+
+<div class="flex flex-col h-full p-8 transition place-content-center hover:shadow-2xl hover:shadow-gray-600/10">
+    <p class="text-xl font-semibold text-gray-700 dark:text-white">{ title }</p>
+    <p class="mt-2 text-gray-600 dark:text-gray-300">
+        <slot />
+    </p>
+</div>

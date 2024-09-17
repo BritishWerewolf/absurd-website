@@ -9,8 +9,9 @@ export default {
 		extend: {
 			colors: ({ colors }) => ({
 				primary: {
-					100: "#9333ea",
-					900: "#7315cb",
+					100: "#ba7df2",
+					500: "#512677",
+					900: "#490d82",
 				},
 				secondary: {
 					100: "#ff7e33",
