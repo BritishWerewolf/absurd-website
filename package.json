@@ -15,7 +15,7 @@
     "@sentry/astro": "^8.30.0",
     "@spotlightjs/astro": "^2.1.9",
     "@typescript-eslint/parser": "^8.6.0",
-    "astro": "^4.15.7",
+    "astro": "^4.15.5",
     "eslint": "^9.10.0",
     "eslint-plugin-astro": "^1.2.4",
     "eslint-plugin-jsx-a11y": "^6.10.0",
